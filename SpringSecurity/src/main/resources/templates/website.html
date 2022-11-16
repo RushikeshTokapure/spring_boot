@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web-site</title>
+</head>
+<body bgcolor="#AED6F1">
+	<div style="text-align: center">
+		<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+	</div>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Log Out">
+	</form>
+</body>
+</html>

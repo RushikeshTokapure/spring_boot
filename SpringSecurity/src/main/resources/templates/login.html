@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LogIn</title>
+</head>
+<body bgcolor="#AED6F1">
+	<div th:if="${param.error}">
+		<h3>the username and password mentioned are incorrect</h3>
+	</div>
+	<div th:if="${param.logout}">
+		<h3>the user has been logged out</h3>
+	</div>
+	<form th:action="@{/login}">
+		<div>
+			<label>Customer User Name: <input type="text" name="username"></label>
+		</div>
+		<div>
+			<label>Customer Password: <input type="password"
+				name="password"></label>
+		</div>
+		<div>
+			<input type="submit" value="Login">
+		</div>
+	</form>
+</body>
+</html>
